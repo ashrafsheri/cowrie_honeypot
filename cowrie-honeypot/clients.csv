@@ -1,0 +1,155 @@
+id,version
+1,SSH-2.0-PuTTY_Release_0.76
+2,SSH-2.0-PuTTY
+3,SSH-2.0-Go
+4,SSH-2.0-Go
+5,SSH-2.0-Go
+6,SSH-2.0-Go
+7,SSH-2.0-Go
+8,SSH-2.0-Go
+9,SSH-2.0-Go
+10,SSH-2.0-Go
+11,SSH-2.0-Go
+12,SSH-2.0-Go
+13,SSH-2.0-Go
+14,SSH-2.0-Go
+15,SSH-2.0-Go
+16,SSH-2.0-Go
+17,SSH-2.0-Go
+18,SSH-2.0-Go
+19,SSH-2.0-Go
+20,SSH-2.0-Go
+21,SSH-2.0-Go
+22,SSH-2.0-Go
+23,SSH-2.0-Go
+24,SSH-2.0-Go
+25,SSH-2.0-Go
+26,SSH-2.0-Go
+27,SSH-2.0-Go
+28,SSH-2.0-Go
+29,SSH-2.0-Go
+30,SSH-2.0-Go
+31,SSH-2.0-Go
+32,SSH-2.0-Go
+33,SSH-2.0-Go
+34,SSH-2.0-Go
+35,SSH-2.0-Go
+36,SSH-2.0-Go
+37,SSH-2.0-Go
+38,SSH-2.0-Go
+39,SSH-2.0-Go
+40,SSH-2.0-Go
+41,SSH-2.0-Go
+42,SSH-2.0-Go
+43,SSH-2.0-libssh2_1.4.3
+44,"SSH-2.0-ZGrab ZGrab SSH Survey"
+45,SSH-2.0-OpenSSH_for_Windows_8.1
+46,SSH-2.0-JSCH_0.1.48
+47,""
+48,"GET / HTTP/1.0"
+49,"OPTIONS / HTTP/1.0"
+50,SSH-2.0-PuTTY_Release_0.60
+51,SSH-2.0-PuTTY_Release_0.62
+52,SSH-2.0-libssh_0.9.3
+53,SSH-2.0-libssh2_1.9.0
+54,"GET / HTTP/1.1"
+55,SSH-2.0-HELLOWORLD
+56,SSH-2.0-OpenSSH
+57,SSH-2.0-WinSCP_release_4.1.9
+58,SSH-2.0-paramiko_1.10.1
+59,SSH-2.0-WinSCP_release_5.1.5
+60,SSH-2.0-PUTTY
+61,SSH-2.0-libssh2_1.8.2
+62,SSH-2.0-OpenSSH_5.9
+63,"SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2"
+64,"SSH-2.0-OpenSSH_9.0p1 Debian-1+b2"
+65,SSH-2.0-libssh-0.3.4
+66,SSH-2.0-PuTTY_Release_0.59
+67,SSH-2.0-WinSCP_release_5.7.5
+68,SSH-2.0-libssh-0.6.3
+69,SSH-2.0-PuTTY_Release_0.62.1
+70,SSH-2.0-WinSCP_release_5.2.7
+71,SSH-2.0-libssh-0.11
+72,"\xba\xabd\xa1EZC\xdbM\x87\xee^\xfd\xbf9 X\xd4>\x98\xc4<\xe0\xcf"
+73,SSH-2.0-libssh_0.9.5
+74,SSH-2.0-paramiko_1.8.1
+75,SSH-2.0-libssh2_1.10.0
+76,SSH-2.0-PuTTY_KiTTY
+77,SSH-2.0-paramiko_1.16.0
+78,SSH-2.0-paramiko_1.12.4
+79,SSH-2.0-WinSCP_release_5.1.3
+80,SSH-2.0-PuTTY_Release_0.63
+81,SSH-2.0-libssh_0.5.5
+82,SSH-2.0-OpenSSH_5.3
+83,SSH-2.0-paramiko_1.7.7.1
+84,SSH-2.0-OpenSSH_3.9p1
+85,SSH-2.0-libssh_0.8.7
+86,"SSH-2.0-OpenSSH_8.4p1 Raspbian-5+b1"
+87,SSH-2.0-paramiko_2.1.1
+88,SSH-2.0-libssh_0.9.6
+89,SSH-2.0-PuTTY_Release_0.64
+90,SSH-2.0-libssh-0.2
+91,SSH-2.0-WinSCP_release_3.8.1
+92,SSH-2.0-PuTTY_Release_0.61
+93,SSH-2.0-libssh2_1.7.0
+94,SSH-2.0-libssh-0.6.0
+95,SSH-2.0-paramiko_1.16.1
+96,SSH-2.0-paramiko_1.7.5
+97,SSH-2.0-libssh-0.1
+98,SSH-2.0-paramiko_2.0.2
+99,"SSH-2.0-OpenSSH_7.9p1 Raspbian-10+deb10u2"
+100,SSH-2.0-paramiko_2.11.0
+101,SSH-2.0-WinSCP_release_5.7.6
+102,"SSH-2.0-OpenSSH_7.9p1 Raspbian-10+deb10u2+rpt1"
+103,"SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2"
+104,SSH-2.0-OpenSSH_6.2
+105,SSH-2.0-OpenSSH_6.0p
+106,SSH-2.0-paramiko_2.0.0
+107,SSH-2.0-OpenSSH_6.0
+108,SSH-2.0-PuTTY_Release_0.67
+109,SSH-2.0-OpenSSH_4.3
+110,SSH-2.0-paramiko_1.15.2
+111,SSH-2.0_CoreLab-1.0
+112,ABCDEFGHIJKLMNOPQRSTUVWXYZ9999
+113,SSH-2.0-Nmap_SSH2_Hostkey
+114,SSH-2.0-OpenSSH_6.1
+115,SSH-2.0-libssh-0.5.2
+116,SSH-2.0-libssh_0.11
+117,SSH-2.0-Granados-1.0
+118,SSH-2.0-PuTTY_Release_0.66
+119,"SSH-2.0-OpenSSH_8.4p1 Raspbian-5+deb11u1"
+120,SSH-2.0-paramiko_1.15.1
+121,SSH-2.0-paramiko_2.1.2
+122,"	"
+123,SSH-1.5-Server
+124,SSH-2.0-WinSCP_release_5.7.4
+125,SSH-2.0-PuTTY_Snapshot_2010_02_20
+126,SSH-2.0-paramiko_1.17.1
+127,SSH-2.0-OpenSSH_5.2
+128,"SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"
+129,SSH-2.0-paramiko_2.7.1
+130,SSH-2.0-OpenSSH-keyscan
+131,SSH-2.0-libssh_0.8.2
+132," "
+133,""
+134,""
+135,""
+136,SSH-2.0-PuTTY_Release_0.65
+137,SSH-2.0-WinSCP_release_4.3.5
+138,SSH-2.0-libssh-0.3.0
+139,SSH-2.0-libssh-0.7.3
+140,SSH-2.0-PuTTY_Release_0.58
+141,SSH-2.0-nexusiotsolutions
+142,MGLNDD_20.238.84.94_22
+143,"SSH-2.0-OpenSSH_6.7p1 Raspbian-5+deb8u3"
+144," "
+145,""
+146,""
+147,""
+148,SSH-2.0-paramiko_2.9.2
+149,SSH-2.0-libssh_0.4.8
+150,SSH-2.0-JSCH_0.1.51
+151,"	"
+152,SSH-2.0-PuTTY_Release_0.77
+153,SSH-2.0-OpenSSH_6.6.1
+154,"SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5"

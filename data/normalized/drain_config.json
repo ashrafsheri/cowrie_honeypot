@@ -1,0 +1,21 @@
+{
+  "drain3": {
+    "sim_th": 0.4,
+    "depth": 5,
+    "max_children": 150,
+    "max_clusters": 2000,
+    "extra_delimiters": [
+      "=",
+      ":",
+      ",",
+      ";",
+      "|",
+      "&",
+      ">",
+      "<"
+    ]
+  },
+  "template_count": 96,
+  "event_type_count": 16,
+  "processed_records": 426829
+}

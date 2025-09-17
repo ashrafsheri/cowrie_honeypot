@@ -1,0 +1,97 @@
+# Test configuration for unit and integration tests
+data:
+  source_type: 'files'
+  input_path: './tests/data/sample_logs'
+  normalized_path: './tests/data/normalized'
+  dataset_path: './tests/data/datasets'
+
+normalization:
+  drain:
+    sim_th: 0.4
+    depth: 4
+    max_children: 20
+    max_clusters: 100
+    extra_delimiters: []
+  
+  pii_masking:
+    enabled: true
+    mask_ips: true
+    mask_users: true
+    mask_ports: true
+
+dataset:
+  window_size: 5
+  stride: 1
+  min_window_size: 3
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+training:
+  mlm:
+    model_name: 'distilbert-base-uncased'
+    max_length: 128
+    max_epochs: 2
+    batch_size: 4
+    learning_rate: 5e-5
+    warmup_steps: 50
+    save_steps: 100
+    eval_steps: 50
+    early_stopping_patience: 2
+    
+  enable_infonce: false
+
+models:
+  mlm_model_path: './tests/models/mlm'
+  infonce_model_path: './tests/models/infonce'
+
+inference:
+  batch_size: 8
+  model_path: './tests/models/mlm'
+  detection_threshold: 0.5
+  
+  calibration:
+    method: 'rolling_percentile'
+    window_size: 100
+    percentile: 90
+    min_samples: 20
+
+evaluation:
+  synthetic_attacks:
+    campaigns_per_type: 2
+    attack_types: ['brute_force', 'command_injection']
+    intensity_levels: ['low', 'medium']
+    
+  weak_labels:
+    rules:
+      failed_login_threshold:
+        enabled: true
+        threshold: 5
+        time_window: 60
+        
+      suspicious_commands:
+        enabled: true
+        command_patterns: ['wget', 'curl', 'chmod']
+        
+      file_operations:
+        enabled: false
+        
+      network_anomalies:
+        enabled: false
+  
+  metrics:
+    precision_k: 10
+    manual_sample_size: 20
+    recall_threshold: 0.8
+
+monitoring:
+  drift_detection:
+    js_divergence_threshold: 0.2
+    ks_test_p_value: 0.05
+    baseline_window_days: 7
+
+deployment:
+  package_path: './tests/package'
+  criteria:
+    min_recall: 0.6
+    min_precision_at_k: 0.4

